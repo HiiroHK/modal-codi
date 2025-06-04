@@ -1,27 +1,23 @@
-import { Asidermodal } from "./componentes modal/Aside modal";
-import { Headermodal } from "./componentes modal/Header Modal";
-import { Tabela } from "./componentes modal/tabela";
-
-export function Modal(isOpen) {
-  if (isOpen) {
-    return (
-      <div>
-        <div className="fixed bg-white z-10 items-center justify-center border rounded-2xl ml-5 ">
-          <Headermodal />
-          <div className="flex">
-            <Asidermodal />
-            <div className="flex gap-2">
-              <div className="flex">
-                <h1>receitas</h1>
-                <button className="border rounded-2xl">filtrar vendas</button>
-                <button className="border rounded-2xl">filtrar</button>
-              </div>
-              <button className="border rounded-2xl">nova venda</button>
-            </div>
-          </div>
-          <Tabela />
+export function Modal() {
+  return (
+    <div className="bg-white ">
+      <header className="flex justify-between">
+        <p>---</p>
+        <div>
+          <h1>Bem vindo</h1>
+          <p>User</p>
         </div>
+      </header>
+      <div className="flex">
+        <aside className="bg-purple-700">
+          <p>Dashboard</p>
+          <p>receitas</p>
+          <p>Despesas</p>
+        </aside>
+        <h1>Receitas</h1>
+        <button>Filtrar vendas</button>
+        <button>Filtrar</button>
       </div>
-    );
-  }
+    </div>
+  );
 }

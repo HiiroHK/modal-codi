@@ -1,6 +1,6 @@
-export function Asidermodal() {
+export function Asidemodal() {
   return (
-    <aside className="bg-purple-600 rounded-s-xl">
+    <aside className="bg-purple-600 rounded-s-xl m-auto">
       <p>Dashboard</p>
       <p>Receitas</p>
       <p>Despesas</p>
