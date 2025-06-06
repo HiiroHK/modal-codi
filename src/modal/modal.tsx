@@ -1,6 +1,6 @@
 export function Modal() {
   return (
-    <div className="bg-white ">
+    <div className="bg-white rounded-2xl">
       <header className="flex justify-between">
         <p>---</p>
         <div>
@@ -8,34 +8,39 @@ export function Modal() {
           <p>User</p>
         </div>
       </header>
-      <div className="flex">
-        <aside className="bg-purple-700">
+      <div className="grid grid-cols-2 gap-2">
+        <aside className="bg-purple-700 rounded-bl-2xl flex flex-col justify-between">
           <p>Dashboard</p>
           <p>receitas</p>
           <p>Despesas</p>
           <button>Sair</button>
         </aside>
-        <div className="flex justify-between">
-          <h1>Receitas</h1>
-          <button className="border rounded-xl">Filtrar vendas</button>
-          <button className="bg-blue-600 border border-blue-500 rounded-xl">
-            Filtrar
-          </button>
-          <button className="border rounded-xl">Nova venda</button>
-        </div>
-      </div>
-      <div className="flex">
         <div>
-          <p className="border">Cliente</p>
-          <p>Jander</p>
-        </div>
-        <div>
-          <p className="border">Curso</p>
-          <p>Fullstack</p>
-        </div>
-        <div>
-          <p className="border">Valor</p>
-          <p>2000,00</p>
+          <div className="flex justify-between">
+            <h1>Receitas</h1>
+            <button className="border rounded-xl">Filtrar vendas</button>
+            <button className="bg-blue-600 border border-blue-500 rounded-xl">
+              Filtrar
+            </button>
+            <button className="border rounded-xl">Nova venda</button>
+          </div>
+          <div className="border rounded-2xl p-1 flex justify-center">
+            <table className="border ">
+              <tr className="flex justify-center gap-10">
+                <th>Cliente</th>
+                <th>Curso</th>
+                <th>Valor</th>
+              </tr>
+              <tr className="grid grid-cols-3 gap-x-3 gap-y-2">
+                <td>jander</td>
+                <td>fullstack</td>
+                <td>2000,00</td>
+                <td>Vanessa</td>
+                <td>Fullstack</td>
+                <td>2000,00</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
